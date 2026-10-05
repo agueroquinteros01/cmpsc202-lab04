@@ -108,7 +108,11 @@ for i = 1 to N do
         do_work()
 ```
 
+the function 'do_work()' is called $(N(N+1))/2$ times
+
 Write a closed-form expression for the number of times `do_work()` is called in terms of $N$.
+
+$(N-i+i)= (N(N=1))/2$
 
 2. Analyze the exact number of times the `do_work()` function is called in the following pseudocode, assuming $N \ge 1$.
 
@@ -124,7 +128,7 @@ If $N=16$, how many times is `do_work()` called?
 
 **Answer**: 31
 
-**Justification**:
+**Justification**: because the for loop calls the function 16 times, then floor divides it down to 8, calls the function 8 times, and so on, until the function has been called 31 times(16+8+4+2+1).
 
 ## Greedy Algorithms
 
@@ -140,4 +144,4 @@ Which of these three strategies guarantees an optimal solution (maximum number o
 
 **Answer**: The earliest finish strategy guarantees an optimal solution.
 
-**Justification**:
+**Justification**: choosing the film that finishes earliest leaves the most time remaining for other films, which maximizes the number of compatible selections. the shortest rule can pick a short film but it may block a more valuable later option. and the earliest rule can choose a film that starts early but lasts too long and prevents several other films from being scheduled.
